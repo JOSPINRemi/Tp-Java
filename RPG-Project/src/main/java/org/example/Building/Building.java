@@ -1,30 +1,65 @@
 package org.example.Building;
 
-public class Building {
-    private String type;
-    private String firstRoom;
-    private String secondRoom;
-    private boolean hasRoof;
-    Building(String type) {
-        this.type = type;
-    }
-    public void setFirstRoom(String firstRoom) {
-        this.firstRoom = firstRoom;
-    }
-    public void setSecondRoom(String type) {
-        this.secondRoom = secondRoom;
-    }
-    public void setHasRoof(Boolean hasRoof) {
-        this.hasRoof = hasRoof;
+public abstract class Building {
+    protected int id;
+    private static int count = 0;
+    protected String color;
+    protected int size;
+    protected String material;
+    protected int priceGold;
+    protected int numberOfRooms;
+    protected String name;
+
+
+    protected Building(){
+        this.id = ++count;
     }
 
-    @Override
-    public String toString() {
-        return "Building{" +
-                "type='" + type + '\'' +
-                ", firstRoom='" + firstRoom + '\'' +
-                ", secondRoom='" + secondRoom + '\'' +
-                ", hasRoof=" + hasRoof +
-                '}';
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public int getPriceGold() {
+        return priceGold;
+    }
+
+    public void setPriceGold(int priceGold) {
+        this.priceGold = priceGold;
+    }
+
+    public int getNumberOfRooms() {
+        return numberOfRooms;
+    }
+
+    public void setNumberOfRooms(int numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
